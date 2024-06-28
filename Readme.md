@@ -20,13 +20,15 @@ You can now access the service at http://localhost:3000/products and see sample 
 - PUT /products/{id} - Updates a product.
 - DELETE /products/{id} - Deletes a product.
 
-Example of a GET request:
+## Examples
+
+### GET request
 
 ```bash
 curl -X GET http://localhost:3000/products
 ```
 
-Example of a POST request:
+### POST request
 
 ```bash
 curl -X POST http://localhost:3000/products -H "Content-Type: application/json" -d '{"name":"Product 4", "price":40.0}'
