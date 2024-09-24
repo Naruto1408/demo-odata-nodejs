@@ -1,0 +1,21 @@
+ID: demo-odata-nodejs
+_schema-version: '3.2'
+version: 1.0.0
+description: A demo project for OData with Node.js
+
+modules:
+  - name: nodejs-service
+    type: nodejs
+    path: .
+    requires:
+      - name: odata-service
+        group: destinations
+    build-parameters:
+      builder: npm
+      build-result: dist
+
+resources:
+  - name: odata-service
+    type: com.sap.xs.odata
+    parameters:
+      path: odata
